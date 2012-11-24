@@ -5,7 +5,7 @@
 * PHP-FPM (with APC, CURL, GD, MySQL modules)
 * PHP Extras (Xdebug and PHPUnit)
 * MySQL
-* [Laravel Framework](http://http://laravel.com/)
+* [Laravel Framework](http://laravel.com/)
 
 Vagrant is a tool for building and distributing virtualized development environments.
 
@@ -23,8 +23,8 @@ installed (version 4.2 and later are preferable). The setup from that point forw
 	2. $ git clone --recursive https://github.com/gustavobgama/LEMP-Box.git your-folder
 	3. cd your-folder
 	4. $ vagrant up
-	5. $ sudo su and then # echo "33.33.33.33  laravel.dev" >> /etc/hosts
-	5. Wait a few minutes
+	5. Wait a few minutes	
+	6. $ sudo su and then # echo "33.33.33.33  laravel.dev" >> /etc/hosts
 
 ## Results
 
@@ -34,4 +34,4 @@ installed (version 4.2 and later are preferable). The setup from that point forw
 
 ## Known Issues
 
-* In first time you are running the command *vagrant up*, is possible that vagrant will return the following message: "VM must be created before running this command. Run `vagrant up` first." In this case you only need reload the configuration with this command: *vagrant reload*
+* In first time you are running the command *vagrant up*, is possible that vagrant will return the following message: "VM must be created before running this command. Run `vagrant up` first." In this case you only need reload the configuration with this command: *vagrant reload*.
