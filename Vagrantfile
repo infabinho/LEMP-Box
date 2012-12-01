@@ -22,6 +22,8 @@ Vagrant::Config.run do  | config |
 		chef.add_recipe "chef-php-extra::xdebug"
 		chef.add_recipe "chef-php-extra::PHPUnit"
 		chef.add_recipe "php-fpm"
+		chef.add_recipe "vim"
+		
 		chef.json = {
 			"mysql" => { 
 				"server_root_password" 	=> "password",
