@@ -45,4 +45,7 @@
 	url = https://github.com/opscode-cookbooks/vim.git
 [submodule "webroot/zend2"]
 	path = webroot/zend2
-	url = https://github.com/zendframework/ZendSkeletonApplication.git
+	url = git@github.com:infabinho/ZendSkeletonApplication.git
+[submodule "webroot/zend"]
+	path = webroot/zend
+	url = git@github.com:infabinho/ZendSkeletonApplication.git

@@ -4,7 +4,7 @@ server {
 
   	access_log  <%= node['nginx']['log_dir'] %>/zend.access.log;
 
-  	root   /home/vagrant/webroot/zend2/public;
+  	root   /home/vagrant/webroot/zend/public;
   	index  index.php;
 
     # removes trailing slashes (prevents SEO duplicate content issues)
