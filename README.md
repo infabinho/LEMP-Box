@@ -23,9 +23,9 @@ installed (version 4.2 and later are preferable). The setup from that point forw
 	2. $ git clone --recursive https://github.com/gustavobgama/LEMP-Box.git your-folder
 	3. cd your-folder
 	4. git checkout cake
-	4. $ vagrant up
-	5. Wait a few minutes	
-	6. $ sudo su and then # echo "10.10.10.11  cake.dev" >> /etc/hosts
+	5. $ vagrant up
+	6. Wait a few minutes
+	7. $ sudo su and then # echo "10.10.10.11  cake.dev" >> /etc/hosts
 
 ## Results
 
