@@ -22,10 +22,12 @@ installed (version 4.2 and later are preferable). The setup from that point forw
 	1. Install Vagrant (version 1.0.5 and later are preferable)
 	2. $ git clone --recursive https://github.com/gustavobgama/LEMP-Box.git your-folder
 	3. cd your-folder
-	4. git checkout cake
-	5. $ vagrant up
-	6. Wait a few minutes
-	7. $ sudo su and then # echo "10.10.10.11  cake.dev" >> /etc/hosts
+	4. $ git checkout cake
+	5. $ git submodule init
+	6. $ git submodule update
+	7. $ vagrant up
+	8. Wait a few minutes
+	9. $ sudo su and then # echo "10.10.10.11  cake.dev" >> /etc/hosts
 
 ## Results
 
