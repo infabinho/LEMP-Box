@@ -33,6 +33,6 @@ installed (version 4.2 and later are preferable). The setup from that point forw
 * Xdebug ready for NetBeans depuration
 * MySQL connection available form host machine (*Host*: 10.10.10.11, *User*: root, *Password*: password)
 
-## Known Issues
+##  Known Issues
 
 * In first time you are running the command *vagrant up*, is possible that vagrant will return the following message: "VM must be created before running this command. Run `vagrant up` first." In this case you only need reload the configuration with this command: *vagrant reload*.
