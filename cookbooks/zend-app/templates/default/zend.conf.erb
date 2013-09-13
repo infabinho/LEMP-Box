@@ -1,11 +1,11 @@
 server {
 	listen   80;
-  	server_name symfony.dev;
+  	server_name zend.dev;
 
-  	access_log  <%= node['nginx']['log_dir'] %>/symfony.access.log;
+  	access_log  <%= node['nginx']['log_dir'] %>/zend.access.log;
 
-  	root   /home/vagrant/webroot/symfony/web;
-  	index  app_dev.php;
+  	root   /home/vagrant/webroot/zend2/public;
+  	index  index.php;
 
     # removes trailing slashes (prevents SEO duplicate content issues)
     if (!-d $request_filename)
@@ -23,17 +23,17 @@ server {
     # unless the request is for a valid file (image, js, css, etc.), send to bootstrap
     if (!-e $request_filename)
     {
-        rewrite ^/(.*)$ /app_dev.php?/$1 last;
+        rewrite ^/(.*)$ /index.php?/$1 last;
         break;
     }
 
     # catch all
-    error_page 404 /app.php;
+    error_page 404 /index.php;
 
  	location ~ \.php$ {
 		fastcgi_split_path_info ^(.+\.php)(/.+)$;
 		fastcgi_pass 127.0.0.1:9000;
-		fastcgi_index app_dev.php;
+		fastcgi_index index.php;
 		include fastcgi_params;
     }
 }

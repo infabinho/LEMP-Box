@@ -5,7 +5,7 @@
 * PHP-FPM (with APC, CURL, GD, MySQL modules)
 * PHP Extras (Xdebug and PHPUnit)
 * MySQL
-* [Symfony Framework](http://symfony.com/)
+* [Zend2 Framework](http://framework.zend.com/)
 
 Vagrant is a tool for building and distributing virtualized development environments.
 
@@ -22,18 +22,18 @@ installed (version 4.2 and later are preferable). The setup from that point forw
 	1. Install Vagrant (version 1.0.5 and later are preferable)
     2. $ git clone --recursive https://github.com/gustavobgama/LEMP-Box.git your-folder
     3. cd your-folder
-    4. $ git checkout symfony
+    4. $ git checkout zend2
     5. $ git submodule init
     6. $ git submodule update
     7. $ vagrant up
     8. Wait a few minutes
-    9. $ sudo su and then # echo "10.10.10.12  symfony.dev" >> /etc/hosts
+    9. $ sudo su and then # echo "10.10.10.13  zend.dev" >> /etc/hosts
 
 ## Results
 
-* NGINX + PHP responding on IP 10.10.10.12 (in browser, type http://symfony.dev and see a default Symfony installation)
+* NGINX + PHP responding on IP 10.10.10.13 (in browser, type http://zend.dev and see a default Zend installation)
 * Xdebug ready for PHP Storm depuration
-* MySQL connection available form host machine (*Host*: 10.10.10.12, *User*: root, *Password*: password)
+* MySQL connection available form host machine (*Host*: 10.10.10.13, *User*: root, *Password*: password)
 
 ## Known Issues
 

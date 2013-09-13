@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: symfony-app
+# Cookbook Name:: zend-app
 # Recipe:: default
 #
 # Copyright 2012, Gustavo Gama
@@ -18,7 +18,7 @@
 # limitations under the License.
 #
 
-#app_name = 'symfony'
+#app_name = 'zend'
 #app_config = node[app_name]
 
 # Set up the Nginx virtual host
@@ -32,7 +32,7 @@ nginx_site "default" do
   	enable false
 end
 
-app_name = "symfony"
+app_name = "zend"
 
 template "#{node['nginx']['dir']}/sites-available/#{app_name}" do
 	source "#{app_name}.conf.erb"
