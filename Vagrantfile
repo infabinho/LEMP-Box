@@ -2,9 +2,9 @@ Vagrant::Config.run do  | config |
 	config.vm.box = "precise32"
  	config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
-	config.vm.customize ["modifyvm", :id, "--memory", "512"]	
+	config.vm.customize ["modifyvm", :id, "--name", "symfony", "--memory", "512"]
 
-	config.vm.network :hostonly, "33.33.33.33"
+	config.vm.network :hostonly, "10.10.10.12"
 	config.vm.share_folder "webroot" , "/home/vagrant/webroot", "./webroot/", :nfs => true 
  
  	config.vm.provision :chef_solo do |chef|
@@ -13,7 +13,7 @@ Vagrant::Config.run do  | config |
 		chef.add_recipe "build-essential"
 		chef.add_recipe "mysql::server"
 		chef.add_recipe "nginx"
-		chef.add_recipe "laravel-app"
+		chef.add_recipe "symfony-app"
 		chef.add_recipe "php"
 		chef.add_recipe "php::module_apc"
 		chef.add_recipe "php::module_curl"
@@ -27,12 +27,12 @@ Vagrant::Config.run do  | config |
 		chef.json = {
 			"mysql" => { 
 				"server_root_password" 	=> "password",
-				"bind_address"			=> "33.33.33.33",
+				"bind_address"			=> "10.10.10.12",
 				"allow_remote_root" 	=> true
 			},
 			"xdebug" => {
-				"remote_host" 	=> "33.33.33.1",
-				"idekey" 		=> "netbeans-xdebug"
+				"remote_host" 	=> "10.10.10.1",
+				"idekey" 		=> "PHP_STORM"
 			}
 	  	}
 	end
