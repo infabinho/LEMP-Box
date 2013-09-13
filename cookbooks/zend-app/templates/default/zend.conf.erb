@@ -1,10 +1,10 @@
 server {
 	listen   80;
-  	server_name laravel.dev;
+  	server_name zend.dev;
 
-  	access_log  <%= node['nginx']['log_dir'] %>/laravel.access.log;
+  	access_log  <%= node['nginx']['log_dir'] %>/zend.access.log;
 
-  	root   /home/vagrant/webroot/laravel/public;
+  	root   /home/vagrant/webroot/zend/public;
   	index  index.php;
 
     # removes trailing slashes (prevents SEO duplicate content issues)

@@ -5,7 +5,7 @@
 * PHP-FPM (with APC, CURL, GD, MySQL modules)
 * PHP Extras (Xdebug and PHPUnit)
 * MySQL
-* [Laravel Framework](http://laravel.com/)
+* [Zend2 Framework](http://framework.zend.com/)
 
 Vagrant is a tool for building and distributing virtualized development environments.
 
@@ -20,17 +20,20 @@ First, make sure your development machine has [VirtualBox](http://www.virtualbox
 installed (version 4.2 and later are preferable). The setup from that point forward is very easy:
 
 	1. Install Vagrant (version 1.0.5 and later are preferable)
-	2. $ git clone --recursive https://github.com/gustavobgama/LEMP-Box.git your-folder
-	3. cd your-folder
-	4. $ vagrant up
-	5. Wait a few minutes	
-	6. $ sudo su and then # echo "33.33.33.33  laravel.dev" >> /etc/hosts
+    2. $ git clone --recursive https://github.com/gustavobgama/LEMP-Box.git your-folder
+    3. cd your-folder
+    4. $ git checkout zend2
+    5. $ git submodule init
+    6. $ git submodule update
+    7. $ vagrant up
+    8. Wait a few minutes
+    9. $ sudo su and then # echo "10.10.10.13  zend.dev" >> /etc/hosts
 
 ## Results
 
-* NGINX + PHP responding on IP 33.33.33.33 (in browser, type http://laravel.dev and see a default Laravel installation)
-* Xdebug ready for NetBeans depuration
-* MySQL connection available form host machine (*Host*: 33.33.33.33, *User*: root, *Password*: password)
+* NGINX + PHP responding on IP 10.10.10.13 (in browser, type http://zend.dev and see a default Zend installation)
+* Xdebug ready for PHP Storm depuration
+* MySQL connection available form host machine (*Host*: 10.10.10.13, *User*: root, *Password*: password)
 
 ## Known Issues
 
