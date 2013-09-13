@@ -4,7 +4,7 @@ server {
 
   	access_log  <%= node['nginx']['log_dir'] %>/cake.access.log;
 
-  	root   /home/vagrant/webroot/cake_install/app/webroot;
+  	root   /home/vagrant/webroot/cake/app/webroot;
   	index  index.php;
 
     # removes trailing slashes (prevents SEO duplicate content issues)
