@@ -46,3 +46,6 @@
 [submodule "cookbooks/vim"]
 	path = cookbooks/vim
 	url = https://github.com/opscode-cookbooks/vim.git
+[submodule "webroot/cake"]
+	path = webroot/cake
+	url = https://github.com/cakephp/cakephp.git
