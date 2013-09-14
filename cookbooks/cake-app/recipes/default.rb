@@ -1,8 +1,10 @@
 #
-# Cookbook Name:: laravel-app
+# Cookbook Name:: cake-app
 # Recipe:: default
 #
 # Copyright 2012, Gustavo Gama
+#
+# Modified by Fabio Souza, 2013
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
 # limitations under the License.
 #
 
-#app_name = 'laravel'
+#app_name = 'cake'
 #app_config = node[app_name]
 
 # Set up the Nginx virtual host
@@ -31,7 +33,7 @@ nginx_site "default" do
   	enable false
 end
 
-app_name = "laravel"
+app_name = "cake"
 
 template "#{node['nginx']['dir']}/sites-available/#{app_name}" do
 	source "#{app_name}.conf.erb"
